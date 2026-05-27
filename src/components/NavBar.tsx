@@ -1,15 +1,17 @@
+import ColorModeSwitch from "./ColorModeSwitch";
+
 export default function NavBar() {
   return (
     <>
-      <div className="border py-2 px-4 ">
+      <div className="flex justify-between border-b border-zinc-300 py-3 px-6 dark:bg-blue-950">
         <div className="flex gap-1 items-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
             strokeWidth={1}
-            stroke="blue"
-            className="size-8"
+            stroke="currentColor"
+            className="size-8 text-blue-500"
           >
             <path
               strokeLinecap="round"
@@ -18,8 +20,9 @@ export default function NavBar() {
             />
           </svg>
 
-          <div className="font-semibold text-blue-950 text-xl">Game-Hub</div>
+          <div className="font-semibold text-blue-950 text-xl dark:text-white">Game-Hub</div>
         </div>
+          <ColorModeSwitch />
       </div>
     </>
   );
